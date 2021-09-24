@@ -7,7 +7,7 @@ The purpose of this project was to create a tool for people with busy schedules 
 This is a simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 ## Screenshot
-![Screenshot of start page](/assets.images/Screenshot-scheduler.jpg)
+![Screenshot of page](./assets/images/Screenshot-scheduler.jpg)
 
 
 ## Credits
