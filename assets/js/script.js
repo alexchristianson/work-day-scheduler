@@ -1,4 +1,8 @@
-$("#currentDay").text(moment().format("dddd, MM/DD/YYYY"));
+function currentDay() {
+    $("#currentDay").text(moment().format("dddd, MM/DD/YYYY"));
+}
+
+
 
 $(".saveBtn").on("click", function() {
     var textValue = $(this).siblings(".text-value").val();
@@ -35,5 +39,7 @@ function cssUpdate() {
     })
 };
 
+currentDay();
 cssUpdate();
-setInterval(cssUpdate, 300000);
+setInterval(cssUpdate, 900000);
+setInterval(currentDay, 3600000)
