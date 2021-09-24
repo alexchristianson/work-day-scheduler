@@ -1,0 +1,1 @@
+$("#currentDay").moment().format("dddd, MM/DD/YYYY")
