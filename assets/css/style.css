@@ -63,9 +63,16 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  font-size: 20px;
 }
 
 .saveBtn i:hover {
   font-size: 20px;
+  color: black;
   transition: all .3s ease-in-out;
+}
+
+.divTime {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
