@@ -36,3 +36,4 @@ function cssUpdate() {
 };
 
 cssUpdate();
+setInterval(cssUpdate, 300000);
