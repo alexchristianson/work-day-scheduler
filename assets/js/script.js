@@ -1,15 +1,16 @@
+// set current day and date
 function currentDay() {
     $("#currentDay").text(moment().format("dddd, MM/DD/YYYY"));
 }
 
-
-
+// save task by clicking save button
 $(".saveBtn").on("click", function() {
     var textValue = $(this).siblings(".text-value").val();
     var hourDiv = $(this).parent().attr("id");
 
     localStorage.setItem(hourDiv, textValue);
 });
+
 // repeat for each hour (change the hour)
 $("#9 .text-value").val(localStorage.getItem("9"));
 $("#10 .text-value").val(localStorage.getItem("10"));
@@ -21,12 +22,12 @@ $("#15 .text-value").val(localStorage.getItem("15"));
 $("#16 .text-value").val(localStorage.getItem("16"));
 $("#17 .text-value").val(localStorage.getItem("17"));
 
-var currentTime = moment().hours();
-
+// function to assign past, present, or future class to each time slot
 function cssUpdate() {
     $(".divTime").each(function() {
         var divID = parseInt($(this).attr("id")); 
-        
+        var currentTime = moment().hours();
+
         if (currentTime === divID) {
             $(this).removeClass("future")
             $(this).addClass("present")
@@ -39,10 +40,12 @@ function cssUpdate() {
             $(this).addClass("future")
         }
     })
-    console.log("colors are updating")
 };
 
+// calling functions upon loading page
 currentDay();
 cssUpdate();
+
+// intervals to update page
 setInterval(cssUpdate, 60000);
 setInterval(currentDay, 3600000)
