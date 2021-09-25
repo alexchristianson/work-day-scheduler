@@ -28,18 +28,21 @@ function cssUpdate() {
         var divID = parseInt($(this).attr("id")); 
         
         if (currentTime === divID) {
+            $(this).removeClass("future")
             $(this).addClass("present")
         }
         else if (currentTime > divID) {
+            $(this).removeClass("present")
             $(this).addClass("past")
         }
         else {
             $(this).addClass("future")
         }
     })
+    console.log("colors are updating")
 };
 
 currentDay();
 cssUpdate();
-setInterval(cssUpdate, 900000);
+setInterval(cssUpdate, 60000);
 setInterval(currentDay, 3600000)
